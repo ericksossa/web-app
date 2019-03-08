@@ -270,7 +270,7 @@ img{
 
 
 .main-nav {
-	background-color: #1d252e;
+	background-color: #038BC8;
 	position: fixed;
 	padding-top: 50px;
 	width: 260px;
@@ -282,7 +282,7 @@ img{
 
 
 .main-nav ul li a {
-	color: #5b7182;
+	color: #eeeff0;
 	display: block;
 	font-size: 16px;
 	font-weight: 300;
