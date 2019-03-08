@@ -7,6 +7,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { SectionsComponent } from './shared/sections/sections.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SectionsComponent } from './shared/sections/sections.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgxSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
