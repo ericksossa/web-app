@@ -1,1 +1,235 @@
 /* You can add global styles to this file, and also import other style files */
+.story-card {
+    font-family: 'Open Sans', sans-serif;
+    display: block;
+    position: relative;
+    width: 280px;
+    height: 450px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    border: 1px solid #DDDDDD;
+    transition: box-shadow 0.3s ease-in-out;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    margin-bottom: 56px;
+  }
+  
+  @media (hover: hover) {
+    .story-card:hover {
+      box-shadow: 0 8px 13px rgba(0, 0, 0, 0.2);
+    }
+    .story-card:hover .story-card__content {
+      height: 64%;
+    }
+    .story-card:hover .card-content-primary {
+      visibility: hidden;
+      opacity: 0;
+    }
+    .story-card:hover .card-content-secondary {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  .story-card__banner {
+    height: 148px;
+    width: 100%;
+    height: 180px;
+  }
+  .story-card__banner .story-card-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .story-card__content {
+    display: block;
+    position: absolute;
+    height: 212px;
+    width: 248px;
+    bottom: 0;
+    background-color: #FFFFFF;
+    padding: 24px 16px 32px 16px;
+    transition: height 0.3s;
+    height: 238px;
+  }
+  .story-card__content .card-content-primary {
+    transition: visibility 0.15s, opacity 0.15s linear;
+  }
+  .story-card__content .card-content-secondary {
+    transition: visibility 0.3s, opacity 0.3s linear;
+  }
+  .story-card__content .card-content-primary {
+    visibility: visible;
+    opacity: 1;
+  }
+  .story-card__content .card-content-secondary {
+    position: absolute;
+    top: 24px;
+    left: 16px;
+    width: 248px;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .story-card__content .card-content-primary__logo {
+    height: 50px;
+    margin-bottom: 24px;
+  }
+  .story-card__content .story-card-logo {
+    height: 100%;
+    width: auto;
+  }
+  .story-card__content .card-content-primary__passage {
+    font-size: 16pxf;
+    color: #666666;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    margin-bottom: 56px;
+  }
+  .story-card__content .card-content-secondary__quote {
+    font-size: 22px;
+    font-style: italic;
+    color: #025F97;
+    margin: 0 0 40px 0;
+  }
+  .story-card__content .card-content-secondary__quote:before {
+    content: '\201C';
+  }
+  .story-card__content .card-content-secondary__quote:after {
+    content: '\201D';
+  }
+  .story-card__content .card-content-secondary__author,
+  .story-card__content .card-content-secondary__position {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666666;
+    margin: 0;
+  }
+  .story-card__content .story-card-link {
+    position: absolute;
+    margin: 0;
+    bottom: 32px;
+  }
+  
+  .story-carousel-title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #414141;
+    margin-bottom: 40px;
+  }
+  
+  .story-carousel {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1195px;
+  }
+  
+  .story-carousel-card-container {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  .story-carousel-card-container .story-card {
+    margin: 0;
+  }
+  
+  .story-carousel__slide {
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.6s ease-in-out;
+    width: 100%;
+  }
+  .story-carousel__slide--current {
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
+    position: relative;
+  }
+  .story-carousel__slide--next {
+    transform: translateX(100%);
+  }
+  .story-carousel__slide--previous {
+    transform: translateX(-100%);
+  }
+  
+  .story-carousel-control {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 56px;
+  }
+  
+  .story-carousel-control__next,
+  .story-carousel-control__previous {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #DDDDDD;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.1s linear;
+  }
+  .story-carousel-control__next .flat-icon,
+  .story-carousel-control__previous .flat-icon {
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #1976D2;
+  }
+  .story-carousel-control__next:hover,
+  .story-carousel-control__previous:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  .story-carousel-control__next--disabled .flat-icon,
+  .story-carousel-control__previous--disabled .flat-icon {
+    color: #CCCCCC;
+  }
+  
+  .story-carousel-control__step {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #1976D2;
+    border-radius: 50%;
+    margin: 0 15px;
+  }
+  .story-carousel-control__step--one {
+    margin-left: 30px;
+  }
+  .story-carousel-control__step--four {
+    margin-right: 30px;
+  }
+  .story-carousel-control__step.active {
+    background-color: #444444;
+  }
+  
+  .arrow-left {
+    display: block;
+    position: relative;
+    width: 12px;
+    height: 12px;
+    border-left: 2px solid #1976D2;
+    border-bottom: 2px solid #1976D2;
+    top: 50%;
+    transform: rotate(45deg) translateY(-50%);
+    margin: 0 auto;
+  }
+  
+  .arrow-right {
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-right: 1px solid #1976D2;
+    border-bottom: 1px solid #1976D2;
+  }
